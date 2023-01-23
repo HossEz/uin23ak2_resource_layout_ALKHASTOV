@@ -12,7 +12,7 @@
 body {
   font-family: 'Rubik', sans-serif;
   font-size: var(--rootsize);
-  margin: 0;
+  margin: 2rem;
 }
 
 div.container {
@@ -37,7 +37,6 @@ h1 {
   border-bottom: none;
   transition: ease-in-out .2s;
   margin-right: 1rem;
-  overflow: hidden;
 }
 .categorybtn:hover {
   color: var(--lightblue);
