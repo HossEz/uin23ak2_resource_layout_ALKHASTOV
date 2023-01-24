@@ -96,13 +96,11 @@ const resources = [
 ]
 
 
-const HtmlResources = resources.filter(resource => resource.category === "HTML");
+const HtmlResources = resources.filter(resource => resource.category === "HTML", );
 const CssResources = resources.filter(resource => resource.category === "CSS");
 const JavascriptResources = resources.filter(resource => resource.category === "JavaScript");
 const ReactResources = resources.filter(resource => resource.category === "React");
 const SanityResources = resources.filter(resource => resource.category === "Sanity and headless CMS");
-
-
 
 let menuHTML = ""
 let menuHTML2 = ""
@@ -113,7 +111,7 @@ HtmlResources.map(category => {
     menuHTML2 += `<p>${category.text}</p>`;
 category.sources.map(sources => {
     menuHTML2 += `<ul><li><a href="${sources.url}">${sources.title}</a></li></ul>`
-});
+}); 
 });
 CssResources.map(category => {
     menuHTML += `<button id="css-button" class="categorybtn">${category.category}</button>`;
@@ -137,7 +135,7 @@ const javascriptButton = document.getElementById("javascript-button")
 const reactButton = document.getElementById("react-button")
 const sanityButton = document.getElementById("sanity-button")
 
-		document.getElementById("html-button").classList.toggle("active");
+document.getElementById("html-button").classList.toggle("active");
 htmlButton.addEventListener("click", () => {
     let htmlContent = "";
     HtmlResources.map(resource => {
