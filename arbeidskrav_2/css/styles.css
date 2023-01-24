@@ -3,6 +3,8 @@
 :root {
   --lightblue:#25DFE6;
   --gray:#707070;
+  --lightergray:#B7B7B7;
+  --lightestgray:#F5F5F5;
   --white:#FFFFFF;
   --black:#000000;
   --rootsize: 20px;
@@ -22,7 +24,7 @@ div.container {
 }
 
 h1 {
-  border: 1px solid var(--gray);
+  border: 1px solid var(--lightergray);
   padding: 50px;
   color: var(--gray);
   font-weight: 600;
@@ -32,11 +34,12 @@ h1 {
   font-size: 26px;
   color: var(--gray);
   padding: 25px;
-  background-color: var(--white); 
-  border: 1px solid var(--gray);
+  background-color: var(--lightestgray); 
+  border: 1px solid var(--lightergray);
   border-bottom: none;
   transition: ease-in-out .2s;
   margin-right: 1rem;
+  cursor: pointer;
 }
 .categorybtn:hover {
   color: var(--lightblue);
@@ -53,7 +56,7 @@ h1 {
 
 main {
   padding: 2rem;
-  border: 1px solid var(--gray);
+  border: 1px solid var(--lightergray);
   border-top: 8px solid var(--lightblue);
   color: var(--gray);
 }
@@ -62,4 +65,17 @@ main p {
 }
 main h2 {
   font-weight: 600;
+}
+.active{
+  font-size: 26px;
+
+  cursor: pointer;
+
+  background-color: var(--lightblue);
+  color: var(--white);
+  transition: ease-in-out .2s;
+  border: none; 
+}
+.active:hover{
+  color: var(--white);
 }
