@@ -102,11 +102,11 @@ let menuHTML = "";
 const categories = ["HTML", "CSS", "JavaScript", "React", "Sanity and headless CMS"];
 
 // Løkker gjennom alle kategoriene og lager en knapp for hver kategori, 
-// og legger til data-attributtet "category" til knappen. Legger disse knappene til elementet med id "categories"
+// og legger til data-attributtet "category" til knappen. Legger disse kategori knappene til elementet med id "categories"
 categories.forEach(category => {
     menuHTML += `<button class="categorybtn" data-category="${category}">${category}</button>`;
 });
-// Legger til knappene i HTML-koden
+// Legger til kategori-knappene i HTML-koden
 document.querySelector("#categories").innerHTML = menuHTML;
 
 // Legger til en click-event til hver knapp
@@ -116,7 +116,7 @@ document.querySelectorAll('.categorybtn').forEach(button => {
         const category = event.target.dataset.category;
         // Filtrerer resources-arrayet for å kun få ressursene for den valgte kategorien
         const filteredResources = resources.filter(resource => resource.category === category);
-        // Lager en variabel som inneholder innholdet som skal vises i .category-content elementet
+        // Lager en variabel som skal inneholde innholdet som skal vises i .category-content elementet
         let content = "";
         // Løkker gjennom de filtrerte ressursene og legger til kategori-tittel og tekst,
         // samt lenkene som hører til
@@ -137,10 +137,10 @@ document.querySelectorAll('.categorybtn').forEach(button => {
         // Legger til "active" klassen til den trykte knappen
         event.target.classList.add('active');
         // Dette gjør at kun den trykte knappen har "active" klassen,
-        // og det viser brukeren om hvilken kategori som er valgt.
+        // som viser brukeren hvilken kategori som er valgt.
     });
 });
-// Første kategori knapp trykkes automatisk når siden lastes inn,
-//for å vise innholdet som er koblet til denne kategorien.
+// Første kategori knapp, som er "HTML", trykkes automatisk når siden lastes inn,
+// for å vise innholdet som er koblet til denne kategorien.
 document.querySelector('.categorybtn').click();
 
